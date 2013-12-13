@@ -17,9 +17,17 @@ public class Ejercicio5 {
         for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 10; j++) {
                 if (i%2 == 0){
-                    
+                    tabla[i][j] = 1;
+                } else {
+                    tabla[i][j] = 0;
                 }
             }
+        }
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.print(tabla[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
