@@ -14,7 +14,7 @@ public class Ejercicio16 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        //rellenar i con posisiones par de v y p con posisiones impar de v
+        //rellenar i con posisiones par de v, y p con posisiones impar de v
         int[] i = new int[5];
         int[] p = new int[5];
         int[] v = new int[10];

@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author USER
  */
 public class Ejercicio7 {
-
+ 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int valor = s.nextInt();
