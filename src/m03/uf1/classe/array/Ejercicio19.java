@@ -17,7 +17,7 @@ public class Ejercicio19 {
         Scanner s = new Scanner(System.in);
         System.out.println("Introduce el numero de alumnos:");
         int n = s.nextInt();
-        //aunq float guarda solo las notas, la columna 3 se añade para guardar las medias
+        //aunq float notas guarda solo las notas, la columna 3 se añade para guardar las medias
         float[][] notas = new float[n][3];
         String[] nombre = new String[n];
         System.out.println("Introduce los porcentajes del primer parcial y el del segundo:");
@@ -37,7 +37,6 @@ public class Ejercicio19 {
             }
 //            notas[i][2] = mediatotal/2;
             notas[i][2] = mediatotal;
-            System.out.println(mediatotal);
         }
         //sacar los alumnos suspensos y aprobados
         String sus = "";
@@ -47,7 +46,7 @@ public class Ejercicio19 {
             if (notas[i][2] < 5) {
                 sus += nombre[i] + ", ";
             } else {
-                apro += nombre[i] + ", ";
+                apro += nombre[i] + "\n";
                 if (max < notas[i][2]) {
                     max = notas[i][2];
                 }
