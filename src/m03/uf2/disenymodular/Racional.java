@@ -46,7 +46,16 @@ public class Racional {
         return resultado;
     }
     
-    
+    public static Racional division(Racional r1, Racional r2) {
+        Racional resultado;
+        int nuevonumerador;
+        int nuevodenominador;
+        nuevonumerador = r1.getNumerador() * r2.getDenominador();
+        nuevodenominador = r1.getDenominador() * r2.getNumerador();
+        
+        resultado = new Racional(nuevonumerador, nuevodenominador);
+        return resultado;
+    }
     
     public String toString() {
         String cadena;
