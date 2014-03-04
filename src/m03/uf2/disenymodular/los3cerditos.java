@@ -9,32 +9,80 @@ package m03.uf2.disenymodular;
  * @author USER
  */
 public class los3cerditos {
+    private Cerdito c1;
+    private Cerdito c2;
+    private Cerdito c3;
+    
+    private Lobo lobo;
+    
+    private Casa h1;
+    private Casa h2;
+    private Casa h3;
     public static void main(String[] args) {
-        Cerdito c1 = new Cerdito("samll");
-        Cerdito c2 = new Cerdito("medium");
-        Cerdito c3 = new Cerdito("big");
+        los3cerditos cuento = new los3cerditos();
         
-        Lobo lobo = new Lobo("forious");
+        cuento.empezar();
+    }
+    public void empezar() {
+        this.c1 = new Cerdito("small");
+        this.c2 = new Cerdito("medium");
+        this.c3 = new Cerdito("big");
         
-        Casa h1 = c1.construir("paja");
-        Casa h2 = c2.construir("madera");
-        Casa h3 = c3.construir("ladrillo");
+        this.lobo = new Lobo("forious");
         
-        lobo.mover(h1);
-        lobo.soplar();
+        this.h1 = c1.construir("paja");
+        this.h2 = c2.construir("madera");
+        this.h3 = c3.construir("ladrillo");
         
-        c1.mover(h2);
+        System.out.println(this.toString());
         
-        lobo.mover(h2);
-        lobo.soplar();
+        this.lobo.mover(this.h1);
+        this.lobo.soplar();
         
-        c1.mover(h3);
-        c2.mover(h3);
+        this.c1.mover(this.h2);
         
-        lobo.mover(h3);
-        lobo.soplar();
+        System.out.println(this.toString());
+
+        this.lobo.mover(this.h2);
+        this.lobo.soplar();
         
-        lobo.subirchimenea();
-        lobo.muere();
+        System.out.println(this.toString());
+
+        this.c1.mover(this.h3);
+        this.c2.mover(this.h3);
+        
+        System.out.println(this.toString());
+
+        this.lobo.mover(this.h3);
+        this.lobo.soplar();
+        
+        System.out.println(this.toString());
+
+        this.lobo.subirChimenea();
+        this.lobo.morir();
+        
+        System.out.println(this.toString());
+
+    }
+    
+    @Override
+    public String toString() {
+        String salida;
+        salida = "Los3Cerditos[" + 
+                this.c1.toString() + 
+                ", " + 
+                this.c2.toString() +
+                ", " +
+                this.c3.toString() +
+                ", " +
+                this.lobo.toString() +
+                ", " +
+                this.h1.toString() +
+                ", " +
+                this.h2.toString() + 
+                ", " + 
+                this.h3.toString() +
+                "]";
+        return salida;
     }
 }
