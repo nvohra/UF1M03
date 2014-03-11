@@ -150,5 +150,5 @@ public class repasexam {
 //        else {
 //            System.out.println("El array es simetrico");
 //        }
-    }
+    } 
 }
