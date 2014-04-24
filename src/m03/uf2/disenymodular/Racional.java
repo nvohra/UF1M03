@@ -57,6 +57,7 @@ public class Racional {
         return resultado;
     }
     
+    @Override
     public String toString() {
         String cadena;
         cadena = "Racional[numerador = " + this.numerador + ", denominador = " + this.denominador + "]";
